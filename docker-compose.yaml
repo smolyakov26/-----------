@@ -1,0 +1,15 @@
+services:
+  jupyter-lab:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./alx_notebooks:/alx_notebooks
+      - D:/tensorflow/train:/alx_notebooks/
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
