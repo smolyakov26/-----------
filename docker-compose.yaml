@@ -5,7 +5,6 @@ services:
       - "8888:8888"
     volumes:
       - ./alx_notebooks:/alx_notebooks
-      - D:/tensorflow/train:/alx_notebooks/
     deploy:
       resources:
         reservations:
